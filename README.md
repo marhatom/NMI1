@@ -3,8 +3,19 @@
 
 ## LAPACK
 - [Manual](https://netlib.org/lapack/lug/node11.html)
+```
+$ sudo apt install liblapacke-dev
+$ g++ file.cpp -llapacke
+$ ./a.out
+```
 
 ## UMFPack
+- [Manual](https://users.encs.concordia.ca/~krzyzak/R%20Code-Communications%20in%20Statistics%20and%20Simulation%202014/Zubeh%F6r/SuiteSparse/UMFPACK/Doc/UserGuide.pdf)
+```
+$ sudo apt-get install libsuitesparse-dev
+$ g++ file.cpp -lumfpack
+$ ./a.out
+```
 
 ## The Portable, Extensible Toolkit for Scientific Computation (PETSc)
 - [Manual](https://www.mcs.anl.gov/petsc/petsc-3.6/docs/manual.pdf)
