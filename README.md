@@ -32,8 +32,24 @@ $ export PETSC_ARCH=arch-linux-c-debug
 ```
 Makefile:
 ```
+PETSc.pc := $(PETSC_DIR)/$(PETSC_ARCH)/lib/pkgconfig/PETSc.pc
+PACKAGES := $(PETSc.pc)
+
+CXX = mpic++
+
+CXXFLAGS = $(shell pkg-config --cflags $(PACKAGES))
+LDFLAGS = $(shell pkg-config --libs-only-L $(PACKAGES)) 
+LDFLAGS += -Wl,-rpath,$(shell pkg-config --variable=libdir $(PACKAGES)) 
+LDLIBS = $(shell pkg-config --libs-only-l $(PACKAGES))
+```
+Compile and run:
+```
 $ make uloha_4
 $ ./uloha_4
 ```
-(_alternatively_) ``` $ mpiexec -np 4 ./uloha_4 ```
+(_alternatively_) 
+``` 
+$ make uloha_4
+$ mpiexec -np 4 ./uloha_4 
+```
 
