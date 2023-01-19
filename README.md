@@ -2,13 +2,13 @@
 ![shrekando](https://user-images.githubusercontent.com/91134821/211408165-bce9278c-1119-445e-bca8-001336040a86.png)
 
 ## LAPACK
-- [manual](https://netlib.org/lapack/lug/node11.html)
+- [Manual](https://netlib.org/lapack/lug/node11.html)
 
 ## UMFPack
 
 ## The Portable, Extensible Toolkit for Scientific Computation (PETSc)
-- [manual](https://www.mcs.anl.gov/petsc/petsc-3.6/docs/manual.pdf)
-- Prerequisites - make, python3, C C++ Compiler (e.g. gcc, g++), BLAS/LAPACK, MPI(_Optional_)
+- [Manual](https://www.mcs.anl.gov/petsc/petsc-3.6/docs/manual.pdf)
+- Prerequisites - make, python3, C C++ Compiler (e.g. gcc, g++), BLAS/LAPACK, MPI
 - How to install:
 
 ```
@@ -22,6 +22,18 @@ $ git pull
 $ ./configure
 $ make all check
 
+$ sudo apt install pkg-config
+```
+
+- How to run:
+```
 $ export PETSC_DIR=/cesta/ke/složce/petsc 
 $ export PETSC_ARCH=arch-linux-c-debug
 ```
+Makefile:
+```
+$ make uloha_4
+$ ./uloha_4
+```
+(_alternatively_) ``` $ mpiexec -np 4 ./uloha_4 ```
+
