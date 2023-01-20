@@ -7,4 +7,3 @@ CXXFLAGS = $(shell pkg-config --cflags $(PACKAGES))
 LDFLAGS = $(shell pkg-config --libs-only-L $(PACKAGES)) 
 LDFLAGS += -Wl,-rpath,$(shell pkg-config --variable=libdir $(PACKAGES)) 
 LDLIBS = $(shell pkg-config --libs-only-l $(PACKAGES))
-

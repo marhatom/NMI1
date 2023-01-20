@@ -29,7 +29,7 @@ int main(int argc,char **args) {
 		for (int i=istart; i<iend; i++) {
 			MatSetValue(A, i, i, 4, INSERT_VALUES);
 			if(i < n-1) MatSetValue(A, i+1, i, -1, INSERT_VALUES);
-			if(i > 0) MatSetValue(A, i-1, i, -1, INSERT_VALUES);
+			if(i > 0)   MatSetValue(A, i-1, i, -1, INSERT_VALUES);
 			if(i < n-m) MatSetValue(A, i+m, i, -1, INSERT_VALUES);
 			if(i > m-1) MatSetValue(A, i-m, i, -1, INSERT_VALUES);
   }

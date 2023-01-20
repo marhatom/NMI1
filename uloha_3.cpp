@@ -26,7 +26,7 @@ void Write2Sparse(const char *filename, int n);
 void loadMatrixMM(const char* filename, SparseMatrix& A);
 
 int main() {
-    //Write2Sparse("matice.txt", 1000);
+    Write2Sparse("matice.txt", 10000);
     SparseMatrix A;
     loadMatrixMM("matice.txt", A);
 
@@ -69,8 +69,8 @@ int main() {
 
     umfpack_di_report_info(Control, Info);
 
-    //for (int i=0; i<A.n; i++) 
-    //    x[i];
+    for (int i=0; i<A.n; i++) 
+        cout << x[i] << "\n";
 
     delete[] b;
     delete[] x;
